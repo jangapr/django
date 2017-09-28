@@ -22,15 +22,12 @@ if "install" in sys.argv:
             overlay_warning = True
             break
 
-
 EXCLUDE_FROM_PACKAGES = ['django.conf.project_template',
                          'django.conf.app_template',
                          'django.bin']
 
-
 # Dynamically calculate the version based on django.VERSION.
 version = __import__('django').get_version()
-
 
 setup(
     name='Django',
@@ -71,7 +68,6 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
 )
-
 
 if overlay_warning:
     sys.stderr.write("""
